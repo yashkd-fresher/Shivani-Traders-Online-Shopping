@@ -51,7 +51,7 @@ export function CheckoutForm({ product, clientSecret }: CheckoutFormProps) {
         </div>
         <div>
           <div className="text-lg">
-            {formatCurrency(product.priceInCents / 100)}
+            {formatCurrency(product.priceInCents)}
           </div>
           <h1 className="text-2xl font-bold">{product.name}</h1>
           <div className="line-clamp-3 text-muted-foreground">
@@ -140,7 +140,7 @@ function Form({
           >
             {isLoading
               ? "Purchasing..."
-              : `Purchase - ${formatCurrency(priceInCents / 100)}`}
+              : `Purchase - ${formatCurrency(priceInCents)}`}
           </Button>
         </CardFooter>
       </Card>

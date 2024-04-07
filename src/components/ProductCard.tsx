@@ -27,13 +27,13 @@ export function ProductCard({
   imagePath,
 }: ProductCardProps) {
   return (
-    <Card className="flex overflow-hidden flex-col">
+    <Card className="flex overflow-hidden bg-slate-800 flex-col">
       <div className="relative w-full h-auto aspect-video">
         <Image src={imagePath} fill alt={name} />
       </div>
       <CardHeader>
         <CardTitle>{name}</CardTitle>
-        <CardDescription>{formatCurrency(priceInCents / 100)}</CardDescription>
+        <CardDescription>{formatCurrency(priceInCents)}</CardDescription>
       </CardHeader>
       <CardContent className="flex-grow">
         <p className="line-clamp-4">{description}</p>

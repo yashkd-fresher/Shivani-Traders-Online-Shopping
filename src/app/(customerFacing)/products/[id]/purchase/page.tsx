@@ -15,7 +15,7 @@ export default async function PurchasePage({
 
   const paymentIntent = await stripe.paymentIntents.create({
     amount: product.priceInCents,
-    currency: "USD",
+    currency: "INR",
     metadata: { productId: product.id },
   })
 
